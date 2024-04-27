@@ -1,15 +1,11 @@
 package projeto.empresa.projetoempresa.model;
 
-import java.util.List;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,24 +14,23 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Funcionario {
+public class Dependente {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     private String nome;
-    private EStatusFuncionario status;
-    private boolean zerohora;
-    private boolean vale;
 
     @ManyToOne
-    @JoinColumn(name = "id_cargo")
-    private Cargo cargo;
+    @JoinColumn(name="id_funcionario")
+    private Funcionario funcionario;
 
-    @OneToMany(mappedBy = "funcionario", cascade = CascadeType.ALL)
-    private List<Dependente>  dependentes;
-
-    public static boolean isPresent() {
+    public Object get() {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isPresent'");
+        throw new UnsupportedOperationException("Unimplemented method 'get'");
+    }
+
+    public void setDependente(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDependente'");
     }
 }

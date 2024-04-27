@@ -11,10 +11,7 @@ public class FuncionarioViewDTO {
     private int id;
     private String nome;
     private String cargo;
-    private double salario;
+    private double salarioBrutoMensal;
+    private double salarioBrutoAnual;
     private String status;
-    public void add(FuncionarioViewDTO funcionarioView) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
-    }
 }

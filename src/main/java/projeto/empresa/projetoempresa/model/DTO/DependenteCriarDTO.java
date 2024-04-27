@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class FuncionarioCriarDTO {
+public class DependenteCriarDTO {
     private String nome;
-    private int idCargo;
+    private int idFuncionario;
 }
